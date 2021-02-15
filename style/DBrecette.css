@@ -1,0 +1,185 @@
+/* Style spécifique du formulaire de création & édition d'une recette */
+
+.DBrecette{
+    width: 100%;
+    max-width: 800px;
+}
+
+.DBrecette form{
+    width: 100%;
+}
+
+
+/* Titres des sections du formulaire */
+
+h2{
+    height: 3.2rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    text-align: center;
+    background-color: #ff6f61;
+    color:#f1f1f1;
+    border-radius: 5px;
+}
+
+/* Mise en colonne des labels et inputs */
+
+.titre,
+.description,
+.difficulte,
+.cout,
+.convives,
+.temps,
+.cuisinier
+{
+    display:flex;
+    flex-direction: column;
+    height: auto;
+}
+
+/* Styles des 4 premiers petits champs */
+
+.diff-cout-pour-tps{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.diff-cout-pour-tps label{
+    font-size: 1.6rem;
+}
+
+.diff-cout-pour-tps input, .diff-cout-pour-tps select{
+    height: 4rem;
+    font-size: 2.4rem;
+}
+
+.convives{
+    width: 6rem;
+}
+
+/* Style des champs visibilité et upload image */
+
+.visi-img{
+    text-align: center;
+}
+
+.visi-img>*{
+    margin: 1rem 0;
+}
+
+.visibilite{
+    display:flex;
+    align-items: center;
+    align-self: center;
+    margin-top: 3.2rem;
+}
+
+.visibilite>*{
+    margin-right: 1rem;
+}
+
+.visibilite span, .visibilite label{
+    font-size: 2rem;
+    line-height: 2rem;
+    height: 2rem;
+}
+
+
+/* Style des autres champs "simples" */
+
+.titre input,
+.cuisinier select,
+.description textarea
+{
+    height: 4rem;
+    font-size: 2.4rem;
+}
+
+.description textarea{
+    height: 8rem;
+    font-size: 2.4rem;
+}
+
+input[type="submit"]{
+    height: 4rem;
+    width: 100%;
+    background-color: #ff6f61;
+    border: 1px solid #ff6f61;
+    border-radius: 9999px;
+    outline:none;
+    font-size: 2.4rem;
+    color: #f1f1f1;    
+}
+
+.cancel{
+    font-size: 2.4rem;
+}
+
+/* Style des sections de liste d'ingrédients et d'étapes de la recette */
+
+.ingredients, .etapes{
+    height: fit-content;
+    display:flex;
+    flex-direction: column;
+}
+
+.ingContent, .etContent{
+    width: 100%;
+}
+
+.ingContent input, .etContent textarea{
+    margin: 1rem 0;
+    border-radius: 5px;
+    outline:none;
+    font-size: 2.4rem;
+    width:100%;
+}
+
+.ingredients input{
+    height: 4rem;
+}
+
+.etapes textarea{
+    height: 10rem;
+}
+
+/* Style des boutons d'ajout d'étapes*/
+
+.etape-btn, .ingredient-btn{
+    text-align: center;
+    line-height: 4rem;
+    height: 4rem;
+    width: 50%;
+    background-color: #f1f1f1;
+    border: 1px solid #ff6f61;
+    border-radius: 9999px;
+    outline:none;
+    font-size: 1.6rem;
+    color: #ff6f61;
+    margin-top:1rem;
+    cursor: pointer;
+    width: 50%;
+    min-width: 200px;
+    align-self: center;
+}
+
+.etape-btn span, .ingredient-btn span{
+    font-size: 2.4rem;
+}
+
+.etape-btn:hover, .ingredient-btn:hover{
+    background-color: #ff6f61;
+    color: #f1f1f1;
+}
+
+@media screen and (min-width: 700px){
+
+    .visi-img{
+        flex-direction: row;    
+    }
+}
+
+
+

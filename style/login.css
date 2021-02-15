@@ -1,0 +1,160 @@
+/* Style de la page de log à la section d'administration */
+
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- HEADER ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+
+header{
+    width: 100%;
+    height: auto;
+    margin:0 0 3rem;
+    padding: 0 1.6rem;
+    box-shadow: 0px 0px 10px 1px #ff6f61;
+    background-color: #ff6f61;
+}
+
+header h1{
+    line-height: 5rem;
+    font-size: 3.2rem;
+    color: #f1f1f1;
+    text-align:center;
+}
+
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- MAIN ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+
+/* Style global du formulaire */
+
+main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form{
+    width: 30rem;
+    height: auto;    
+    border: 1px solid #ff6f61;
+    border-radius: 5px;
+    margin: 3.2rem 0;
+    padding: 1.6rem;
+    display:flex;
+    flex-direction: column;    
+}
+
+main form > *{
+    margin: 1rem 0;
+    height: 4rem;
+    font-size: 2.4rem;    
+}
+
+main form input, main form button, main form div{
+    border-radius: 3px;
+}
+
+main form input[type="text"], main form input[type="number"]{
+    padding-left: 1.6rem;
+}
+
+/* on force l'input du login a prendre tout l'espace de son conteneur */
+main form input[type="text"]{
+    width: 100%;
+    height: 100%;
+}
+
+main form input[type="submit"]{
+    background-color: #333;
+    color:#fff;
+}
+
+/* Style de la section password en readonly + button */
+
+.pwd{
+    display:flex;
+    justify-content: space-between;
+}
+
+.pwd input{
+    width: 69%;
+}
+
+.pwd div{
+    width: 30%;
+    background-color: #333;
+    color:#fff;
+    line-height: 4rem;
+    text-align: center;
+    box-shadow: 0px 0px 1px 1px #333;
+    cursor:pointer;
+}
+
+/* Pavé numérique */
+
+.numPad{
+    width: 25rem;
+    height: 25rem;
+    align-self: center;
+    display:grid;
+    grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+    grid-gap: 1rem;
+    background-color: #fff;
+    padding:1rem;
+    border: 3px solid #333;    
+}
+
+.bloc{
+
+    background-color: #333;
+    color: #fff;
+    font-size: 3.2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 1px 1px #333;
+    cursor:pointer;
+
+}
+
+/* Champ de retour d'info en cas d'échec de connexion */
+
+#info{
+    color:crimson;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- FOOTER ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+
+footer form input[type="submit"]{
+    background-color: #ff6f61;
+    color: #f1f1f1;
+    font-size: 1.6rem;
+    border: 1px solid #ff6f61;
+    padding: 0.5rem 1rem;
+}
+
+footer form input[type="submit"]:hover{
+    background-color: #f1f1f1;
+    color: #ff6f61;
+}

@@ -1,0 +1,199 @@
+/* Style de la page d'acceuil de la section d'administration */
+
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- HEADER ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+
+header{
+    width: 100%;
+    height: auto;
+    margin:0 0 3rem;
+    padding: 0 1.6rem;
+    box-shadow: 0px 0px 10px 1px #ff6f61;
+    background-color: #ff6f61;
+}
+
+header h1{
+    line-height: 5rem;
+    font-size: 3.2rem;
+    color: #f1f1f1;
+    text-align:center;
+}
+
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- MAIN ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+
+/* Affichage primaire des deux sections l'une au dessus de l'autre */
+
+main{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+main > * {
+    width: 300px;
+    height: auto;
+    border: 1px solid #ff6f61;
+    border-radius: 5px;
+    margin: 3.2rem 0;
+    padding: 1.6rem;
+}
+
+main h2{
+    font-size: 3.2rem;
+    line-height: 4rem;
+    color: #ff6f61;
+    margin-bottom: 2rem;
+}
+
+/* Agencement des boutons par rapports aux titres de section et aux noms de recettes et de cuisinier de chaque élements des listes */
+
+.item, .title{
+    display:flex;
+    justify-content: space-between;  
+}
+
+.item{
+    align-items: center;
+    border: 1px solid #ff6f61;
+    background-color: #ff6f61;
+    color:#f1f1f1;
+    border-radius: 9999px;
+    padding: 0.5rem;
+    margin: 1rem 0; 
+}
+
+.item span{
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* Styles des boutons de créations, mise à jour et suppressions */
+
+button{
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #ff6f61;
+    background-color: #f1f1f1;    
+    line-height: 4rem;
+    color:#ff6f61;
+}
+
+.createBtn{
+    font-size: 4rem;
+    background-color: #ff6f61;
+    color:#f1f1f1;
+}
+
+.deleteBtn button{
+    font-size: 2.4rem;
+    margin-left: 1rem;
+}
+
+.editBtn button{
+    font-size: 2.4rem;
+    margin-right: 1rem;
+}
+
+
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- FOOTER ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+
+footer input{
+    padding: 0.5rem;
+    background-color: #ff6f61;
+    border: 1px solid #ff6f61;
+    color: #f1f1f1;
+    font-size: 1.6rem;
+    outline: none;
+}
+
+footer input:hover{
+    background-color: #f1f1f1;
+    color: #ff6f61;
+}
+
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- RESPONSIVE ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+
+@media screen and (min-width: 500px){
+
+    header h1{
+        line-height: 7rem;
+        font-size: 4.8rem;
+    }    
+}
+
+@media screen and (min-width: 768px){
+
+    /* bascule en affichage des tableaux cote à coté */
+    main{
+        flex-direction:row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .recettes{
+        width: 50%;
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width:1000px){    
+
+    footer a{
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 2000px){
+
+    /* HEADER */
+
+    header h1{
+        line-height: 15rem;
+        font-size: 10rem;
+    }    
+
+    /* FOOTER */
+
+    footer{
+        margin-top: 3.2rem;
+        padding: 6.4rem 0;
+        font-size: 3.2rem;
+        text-align: center;
+    }
+    
+    footer>*{
+        margin: 3.2rem 0;
+    }
+}

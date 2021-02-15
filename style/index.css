@@ -1,0 +1,219 @@
+/* Style de la page d'acceuil */
+
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- HEADER ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+
+header{
+    width: 100%;
+    height: auto;
+    margin:0 0 3rem;
+    padding: 0 1.6rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px 1px #ff6f61;
+    background-color: #fff;
+}
+
+header h1{
+    line-height: 5rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color:#ff6f61;
+}
+
+header button{
+    width: 4rem;
+    height: 4rem;
+    border:none;
+    background-color: #ff6f61;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    animation: contact-pulse 3s ease-in-out;
+}
+
+header button:hover{
+    transition: all ease-in-out 0.3s;
+    transform: scale(1.2);
+}
+
+@keyframes contact-pulse{
+    0%{box-shadow: 0px 0px 0px 0px #ff6f61;}
+    15%{box-shadow: 0px 0px 5px 0px #ff6f61;}
+    30%{box-shadow: 0px 0px 0px 0px #ff6f61;}
+    45%{box-shadow: 0px 0px 5px 0px #ff6f61;}
+    60%{box-shadow: 0px 0px 0px 0px #ff6f61;}
+    75%{box-shadow: 0px 0px 5px 0px #ff6f61;}
+    90%{box-shadow: 0px 0px 0px 0px #ff6f61;}
+    100%{box-shadow: 0px 0px 0px 0px #ff6f61;}
+}
+
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- MAIN ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+main h2{
+    font-family: 'Kaushan Script', serif;
+    font-size: 2.4rem;
+    text-align: center;
+    color:#ff6f61;
+}
+
+.container{
+    margin: 3rem 0;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    max-width: 1700px;
+    margin:auto;
+}
+
+/* Style de la pagination des pages "toutes recettes" */
+
+.fil{
+    display:flex;
+    justify-content: center;
+    margin-top:5rem;
+}
+
+.fil a{
+    font-size: 2.4rem;
+    margin: 0 1rem;
+    color:#ff6f61;
+}
+
+.fil a:hover{
+    transition: all 0.3s ease-in-out alternate;
+    transform: scale(1.2);
+}
+
+
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- RESPONSIVE ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+
+@media screen and (max-width : 400px){
+
+    .level{
+        font-size: 3.2rem;
+    }
+
+    .level img{
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+}
+
+@media screen and (min-width: 500px){
+
+    /* HEADER */
+
+    header{
+        padding: 0 5%;
+    }
+
+    header h1{
+        line-height: 7rem;
+        font-size: 3.2rem;
+        letter-spacing: 3px;
+    }
+
+    /* MAIN */
+
+    main h2{
+        font-size: 3.2rem;
+    }
+}
+
+@media screen and (min-width: 600px){
+
+    /* HEADER */
+
+    header{
+        padding: 0 10%;
+    }
+
+    /* MAIN */
+
+    main h2{
+        font-size: 5rem;
+    }
+
+    .container{
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 1440px){    
+    
+    .fil{
+        display:flex;
+        justify-content: center;
+    }
+    
+    .fil a{
+        font-size: 2.4rem;
+        margin: 0 1rem;
+    }
+    
+    .fil a:hover{
+        transition: all 0.3s ease-in-out alternate;
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (min-width: 2000px){
+
+    header{
+        margin:0 0 7rem;
+    }
+
+    header h1{
+        line-height: 15rem;
+        font-size: 10rem;
+        letter-spacing: 5px;
+    }
+
+    header button{
+        width: 10rem;
+        height: 10rem;
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    main h2{
+        font-size: 10rem;
+    }
+
+    .fil{
+        margin-top: 7rem;
+    }
+}

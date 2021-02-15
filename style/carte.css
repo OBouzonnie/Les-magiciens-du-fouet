@@ -1,0 +1,306 @@
+/* Éléments de style des cartes, de leur conteneur et leurs animations */
+
+/* Dimensions */
+
+.card{
+    width: 30rem;
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #ff6f61;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 1.6rem;
+    color:#333;
+    background-color: #fff;
+}
+
+.card figure{
+    width: 100%;
+    max-height: 18rem;
+    overflow: hidden;
+    position:relative;
+}
+
+.card-img{
+    width: 100%;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.card-content{
+    padding: 1.6rem;
+}
+
+/* Textes */
+
+.card h3{
+    color: #ff6f61;
+    margin-top : 2rem;
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+.card h4{
+    color: #ff6f61;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card h5{
+    text-align: center;
+    margin: 1rem 0;
+    display:flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+}
+
+.card p{
+    padding: 1.6rem;
+    font-size: 1.6rem;
+}
+
+/* icone de cout et de difficultée */
+
+.level{
+    color:#333;
+    font-size: 5rem;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.level div{
+    display:flex;
+    align-items: center;
+}
+
+.level img{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+/* Animation */
+
+#animListeRecettes, #animCartes{
+    display:none;
+}
+
+.forSmall{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card:hover{
+    transition: all 0.3s ease-in-out alternate;
+    box-shadow: 0px 0px 10px 1px #ff6f61;
+    transform: scale(1.02);
+}
+
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- RESPONSIVE ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+/* ----- */
+
+@media screen and (max-width : 400px){
+
+    .level{
+        font-size: 3.2rem;
+    }
+
+    .level img{
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+}
+
+@media screen and (min-width: 600px){
+
+    .card{
+        margin: 1.6rem;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+
+    .card{
+        width: 32rem;
+    }
+
+    /* La section affichant deux recettes disparait */
+    .forSmall{
+        display:none;
+    }
+
+    /* Effet pages du pseudo livre */
+
+    /* Coté gauche "déroulée */
+
+    #animCartes{
+        display:block;
+        overflow:hidden;
+        position:relative;
+        width: 105rem;
+        height: 50rem;      
+        box-shadow: -5px 0px 10px 1px #333;
+        border-radius: 25px 15px 15px 25px;
+        background-image: linear-gradient(to right, #fff, 50%, #ff6f61);
+    }
+
+    #cartesAnimees{
+        display:flex;
+        transition: left ease-in-out 1.5s;
+        position:absolute;
+        overflow:hidden;
+        height: 50rem;
+        border-radius: 5px 0 0 5px;
+    }
+
+    #animListeRecettes{
+        display:block;
+        overflow:hidden;
+        width: 3rem;
+        height: 50rem;
+        position:relative;
+        box-shadow: 0px 0px 10px 5px #333;
+        border-radius: 5px 25px 25px 5px; 
+        background-image: linear-gradient(to left, #fff, 5%, #ff6f61);
+    }
+    
+    /* On ne lance pas l'animation coté droit */
+    #listeRecettes{
+        display:none;
+    }
+
+    /* Effet pages */
+
+    #alr1, #alr2, #ac1, #ac2{        
+        position:relative;
+        display:flex;
+        align-items:center;
+    }
+
+    #alr1, #alr2{
+        box-shadow: 5px 0px 10px 1px #333;        
+        border-radius: 15px 25px 25px 15px;
+        justify-content: flex-start;
+        background-image: linear-gradient(to left, #fff, 5%, #ff6f61);
+    }
+
+    #ac1, #ac2{
+        box-shadow: -5px 0px 10px 1px #333;
+        border-radius: 25px 10px 10px 25px;
+        justify-content: flex-end;
+        background-image: linear-gradient(to right, #fff, 50%, #ff6f61);
+    }
+
+    /* Les pages coté droit sont roulée sur elle-même par soucis de taille */
+    
+    #alr1{
+        width: 7rem;
+    }
+    #alr2{
+        width: 5rem;
+    }
+
+    /* Les pages coté gauche sont étalées */
+
+    #ac1{
+        width: 107rem;
+    }
+
+    #ac2{
+        width: 106rem;
+    }
+}
+
+@media screen and (min-width: 1440px){  
+
+    #animCartes{
+        box-shadow: -5px 0px 10px 1px #333;
+        border-radius: 25px 15px 15px 25px;
+    }
+
+    #animListeRecettes{
+        width: 32rem;
+        box-shadow: 3px 0px 10px 5px #333; 
+        border-radius: 10px 25px 25px 10px;
+    }
+
+    /* On redimensionne le coté droit et on lance l'animation */
+
+    #listeRecettes{
+        display:block;
+        position:relative;
+        transition: top ease-in-out 1.5s;
+        padding: 0 1rem;
+        border-radius: 25px 5px 5px 25px;
+        background-image: linear-gradient(to left, #fff, 5%, #ff6f61);
+    }
+
+    #alr1{
+        width: 34rem;
+    }
+    #alr2{
+        width: 33rem;
+    }
+
+    /* Style des tags de la liste des recettes */
+
+    .tag{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height: 4rem;
+        font-size: 3.2rem;
+        line-height: 4rem;
+        background-color: #fff;
+        color:#333;
+        border-radius: 9999px;
+        padding: 0.5rem;
+        margin: 0.5rem 0; 
+    }
+    
+    .tag:hover{
+        transition: all 0.3s ease-in-out alternate;
+        background-color: #ff6f61;
+        color:#fff;
+    } 
+
+}
+
+@media screen and (min-width: 2000px){
+
+    .card h4, .card p{
+        display:none;
+    }
+
+    .card h3{
+        font-size: 5rem;
+    }
+
+    .card h5{        
+        font-size: 3.8rem;
+        margin-top:2rem;
+    }
+
+    .level span{
+        font-size: 4rem;
+    }
+
+    .level img{
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+}
